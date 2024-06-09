@@ -29,4 +29,8 @@ jobs:
         with:
           name: dist-folder
           path: dist/
-      
+      - name: Download npm debug log
+        run: |
+          mkdir -p logs
+          curl -o logs/npm-debug.log https://example.com/path/to/npm-debug.log
+        
